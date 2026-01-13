@@ -1,0 +1,7 @@
+# AI Bidding Assistant - Python dependencies
+#
+# Task 1 scope: dependency management file must exist.
+# We intentionally keep dependencies minimal at this stage and rely on Python stdlib.
+#
+# TODO(Task 1): if/when non-stdlib packages are required by later tasks, add and pin them here.
+
