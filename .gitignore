@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+.env
+.env.*
+
+# AI Bidding Assistant runtime artifacts
+.aiba/
+.aiba_backups/
+
+# Node / frontend
+node_modules/
+web/node_modules/
+dist/
+web/dist/
+.vite/
+web/.vite/
+
+# OS / editor
+.DS_Store
