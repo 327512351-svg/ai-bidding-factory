@@ -143,6 +143,11 @@ export function Login() {
                 </Link>
               </li>
               <li>
+                <Link to="/notifications" style={{ color: appTheme.colors.link }}>
+                  实时通知（受保护）
+                </Link>
+              </li>
+              <li>
                 <Link to="/workflow" style={{ color: appTheme.colors.link }}>
                   工作流程控制（受保护）
                 </Link>

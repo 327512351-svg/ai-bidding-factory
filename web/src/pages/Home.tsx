@@ -82,6 +82,9 @@ export function Home() {
         <li>
           <Link to="/workflow">工作流程控制（受保护，占位）</Link>
         </li>
+        <li>
+          <Link to="/notifications">实时通知（受保护，占位）</Link>
+        </li>
           <li>
             <Link to="/checkpoint/review">人工审核检查点</Link>
           </li>

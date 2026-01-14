@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { loadState, saveState } from "./persistence";
 import { authReducer } from "./slices/authSlice";
+import { notificationsReducer } from "./slices/notificationSlice";
 
 const rootReducer = {
   auth: authReducer,
+  notifications: notificationsReducer,
 };
 
 const preloadedState = loadState();

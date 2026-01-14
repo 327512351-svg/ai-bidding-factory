@@ -19,6 +19,7 @@ import { ComplianceDashboard } from "./pages/ComplianceDashboard";
 import { AuditLogs } from "./pages/AuditLogs";
 import { Traceability } from "./pages/Traceability";
 import { Workflow } from "./pages/Workflow";
+import { Notifications } from "./pages/Notifications";
 
 export default function App() {
   return (
@@ -68,6 +69,10 @@ export default function App() {
         <Route
           path="/workflow"
           element={<ProtectedRoute element={<Workflow />} requiredStatus="authenticated" />}
+        />
+        <Route
+          path="/notifications"
+          element={<ProtectedRoute element={<Notifications />} requiredStatus="authenticated" />}
         />
         <Route path="/checkpoint/review" element={<ReviewCheckpoint />} />
         <Route path="/checkpoint/integration" element={<IntegrationCheckpoint />} />
