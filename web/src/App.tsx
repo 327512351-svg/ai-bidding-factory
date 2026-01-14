@@ -21,6 +21,7 @@ import { Traceability } from "./pages/Traceability";
 import { Workflow } from "./pages/Workflow";
 import { Notifications } from "./pages/Notifications";
 import { Reports } from "./pages/Reports";
+import { Config } from "./pages/Config";
 
 export default function App() {
   return (
@@ -78,6 +79,10 @@ export default function App() {
         <Route
           path="/reports"
           element={<ProtectedRoute element={<Reports />} requiredStatus="authenticated" />}
+        />
+        <Route
+          path="/config"
+          element={<ProtectedRoute element={<Config />} requiredStatus="authenticated" />}
         />
         <Route path="/checkpoint/review" element={<ReviewCheckpoint />} />
         <Route path="/checkpoint/integration" element={<IntegrationCheckpoint />} />
