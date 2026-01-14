@@ -10,7 +10,7 @@ export function Home() {
   const user = auth?.user ?? "未登录";
 
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "960px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>AI 投标助手 Web</h1>
       <p style={{ color: appTheme.colors.muted, marginBottom: "1rem" }}>
         Task 1 骨架：项目结构、路由、主题占位。无真实业务逻辑。
@@ -21,7 +21,7 @@ export function Home() {
           borderRadius: "8px",
           padding: "1rem",
           background: appTheme.colors.panel,
-          maxWidth: "640px",
+          maxWidth: "720px",
           marginBottom: "1rem",
         }}
       >
@@ -38,8 +38,9 @@ export function Home() {
           borderRadius: "8px",
           padding: "1rem",
           background: appTheme.colors.panel,
-          maxWidth: "640px",
+          maxWidth: "720px",
         }}
+        aria-label="快速导航"
       >
         <h2 style={{ marginTop: 0 }}>快速导航</h2>
         <ul>
@@ -70,21 +71,21 @@ export function Home() {
           <li>
             <Link to="/review">人工审核队列（受保护，占位）</Link>
           </li>
-        <li>
-          <Link to="/compliance">合规监控仪表板（受保护，占位）</Link>
-        </li>
-        <li>
-          <Link to="/audit">审计日志查看器（受保护，占位）</Link>
-        </li>
-        <li>
-          <Link to="/traceability">追溯链可视化（受保护，占位）</Link>
-        </li>
-        <li>
-          <Link to="/workflow">工作流程控制（受保护，占位）</Link>
-        </li>
-        <li>
-          <Link to="/notifications">实时通知（受保护，占位）</Link>
-        </li>
+          <li>
+            <Link to="/compliance">合规监控仪表板（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/audit">审计日志查看器（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/traceability">追溯链可视化（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/workflow">工作流程控制（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/notifications">实时通知（受保护，占位）</Link>
+          </li>
           <li>
             <Link to="/checkpoint/review">人工审核检查点</Link>
           </li>

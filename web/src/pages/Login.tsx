@@ -40,7 +40,7 @@ export function Login() {
   };
 
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "960px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>登录（占位）</h1>
       <p style={{ color: appTheme.colors.muted, marginBottom: "1rem" }}>
         Task 3.1 骨架：无真实认证逻辑，提交后标记为 requires_human_review。
@@ -51,7 +51,7 @@ export function Login() {
           border: `1px solid ${appTheme.colors.border}`,
           borderRadius: "8px",
           padding: "1rem",
-          maxWidth: "420px",
+          maxWidth: "480px",
           background: appTheme.colors.panel,
         }}
       >
@@ -82,7 +82,7 @@ export function Login() {
         </button>
       </form>
 
-      <section style={{ marginTop: "1rem", maxWidth: "420px" }}>
+      <section style={{ marginTop: "1rem", maxWidth: "480px" }}>
         <h3 style={{ margin: "0 0 0.5rem 0" }}>快速跳转</h3>
         <ul style={{ margin: 0, paddingLeft: "1rem", color: appTheme.colors.muted }}>
           <li>

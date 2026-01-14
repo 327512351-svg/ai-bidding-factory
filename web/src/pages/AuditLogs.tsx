@@ -1,5 +1,6 @@
 import { appTheme } from "../theme";
 import { auditEntries } from "../data/complianceData";
+import { downloadJson } from "../utils/download";
 
 const panelStyle: React.CSSProperties = {
   border: `1px solid ${appTheme.colors.border}`,
@@ -38,7 +39,7 @@ const propertyChecks = [
 
 export function AuditLogs() {
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "1080px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>审计日志查看器（占位）</h1>
       <p style={{ color: appTheme.colors.muted, marginBottom: "1rem" }}>
         Task 12.3/12.4 骨架：提供日志搜索、筛选、与 property 测试占位。
@@ -63,7 +64,16 @@ export function AuditLogs() {
       </section>
 
       <section style={panelStyle}>
-        <h3 style={{ marginTop: 0 }}>审计条目（占位）</h3>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <h3 style={{ marginTop: 0 }}>审计条目（占位）</h3>
+          <button
+            onClick={() => downloadJson(auditEntries, "audit_entries_placeholder.json")}
+            style={{ padding: "0.5rem 0.75rem", borderRadius: "6px", border: `1px solid ${appTheme.colors.border}`, background: "#0b1220", color: appTheme.colors.text, cursor: "pointer" }}
+            aria-label="导出审计条目 JSON"
+          >
+            导出 JSON
+          </button>
+        </div>
         {auditEntries.map((log) => (
           <div key={log.id} style={logRowStyle}>
             <div>

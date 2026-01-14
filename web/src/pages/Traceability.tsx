@@ -33,7 +33,7 @@ const propertyChecks = [
 
 export function Traceability() {
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "1080px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>追溯链可视化（占位）</h1>
       <p style={{ color: appTheme.colors.muted, marginBottom: "1rem" }}>
         Task 12.5/12.6 骨架：展示 traceability 节点、状态与属性测试，真实图形化在后续任务实现。

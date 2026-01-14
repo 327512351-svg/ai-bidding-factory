@@ -1,5 +1,6 @@
 import { appTheme } from "../theme";
 import { complianceOverview } from "../data/complianceData";
+import { downloadJson } from "../utils/download";
 
 const cardStyle: React.CSSProperties = {
   border: `1px solid ${appTheme.colors.border}`,
@@ -32,7 +33,7 @@ const propertyChecks = [
 
 export function ComplianceDashboard() {
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "1080px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>合规监控（占位）</h1>
       <p style={{ color: appTheme.colors.muted, marginBottom: "1rem" }}>
         Task 12.1/12.2 骨架：展示合规状态、警告与评分趋势，并附带 property 测试说明。
@@ -49,7 +50,16 @@ export function ComplianceDashboard() {
       </section>
 
       <section style={cardStyle}>
-        <h3 style={{ marginTop: 0 }}>违规警告列表（占位）</h3>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <h3 style={{ marginTop: 0 }}>违规警告列表（占位）</h3>
+          <button
+            onClick={() => downloadJson(complianceOverview, "compliance_overview_placeholder.json")}
+            style={{ padding: "0.5rem 0.75rem", borderRadius: "6px", border: `1px solid ${appTheme.colors.border}`, background: "#0b1220", color: appTheme.colors.text, cursor: "pointer" }}
+            aria-label="导出合规概览 JSON"
+          >
+            导出 JSON
+          </button>
+        </div>
         <ul style={listBaseStyle}>
           <li>
             <strong>WARNING</strong>：文档分析上下文缺失 - 待 Task 8 输入

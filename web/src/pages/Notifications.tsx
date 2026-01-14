@@ -5,6 +5,7 @@ import { notificationsActions, NotificationItem } from "../state/slices/notifica
 import { RootState } from "../state/types";
 import { sampleNotifications } from "../data/notificationsData";
 import { WsClient } from "../realtime/wsClient";
+import { downloadJson } from "../utils/download";
 
 const cardStyle: React.CSSProperties = {
   border: `1px solid ${appTheme.colors.border}`,
@@ -115,7 +116,7 @@ export function Notifications() {
   );
 
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "1080px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>实时通知（占位）</h1>
       <p style={{ ...muted, marginBottom: "1rem" }}>
         Task 14 骨架：支持本地 mock 通知、连接占位 WS、属性测试说明；不接真实后端。
@@ -138,7 +139,16 @@ export function Notifications() {
       </section>
 
       <section style={cardStyle}>
-        <h3 style={{ marginTop: 0 }}>通知列表</h3>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <h3 style={{ marginTop: 0 }}>通知列表</h3>
+          <button
+            style={buttonStyle}
+            onClick={() => downloadJson(notifications, "notifications_placeholder.json")}
+            aria-label="导出通知 JSON"
+          >
+            导出 JSON
+          </button>
+        </div>
         {sorted.length === 0 ? (
           <p style={muted}>暂无通知（占位）</p>
         ) : (

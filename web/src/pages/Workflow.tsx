@@ -1,5 +1,6 @@
 import { appTheme } from "../theme";
 import { workflowSteps } from "../data/workflowData";
+import { downloadJson } from "../utils/download";
 
 const cardStyle: React.CSSProperties = {
   border: `1px solid ${appTheme.colors.border}`,
@@ -64,7 +65,7 @@ function statusBadge(status: string) {
 
 export function Workflow() {
   return (
-    <main style={{ padding: "1.5rem" }}>
+    <main style={{ padding: "1.5rem", maxWidth: "1080px", margin: "0 auto" }}>
       <h1 style={{ marginBottom: "0.5rem" }}>工作流程控制（占位）</h1>
       <p style={{ ...muted, marginBottom: "1rem" }}>
         Task 13.1/13.2/13.3 骨架：展示阶段、占位控制按钮、属性测试说明；不含真实状态机或计时。
@@ -79,6 +80,13 @@ export function Workflow() {
         </button>
         <button style={buttonStyle} disabled title="占位，未接真实后端">
           回滚上一步（占位）
+        </button>
+        <button
+          style={buttonStyle}
+          onClick={() => downloadJson(workflowSteps, "workflow_placeholder.json")}
+          aria-label="导出工作流程 JSON"
+        >
+          导出 JSON
         </button>
         <span style={muted}>后续 Task 13 将接入 pipeline 状态机与时间记录。</span>
       </section>
