@@ -1,6 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const port = Number(process.env.E2E_PORT || 5173);
+// Use a dedicated port for E2E to avoid collisions with developer Vite instances
+// (and to ensure fresh code is served for tests).
+const port = Number(process.env.E2E_PORT || 5174);
 // Default to localhost (not 127.0.0.1) to avoid certain environments routing 127.0.0.1 via proxy in Firefox.
 const host = process.env.E2E_HOST || "localhost";
 const baseURL = process.env.E2E_BASE_URL || `http://${host}:${port}`;
@@ -23,7 +25,7 @@ export default defineConfig({
   webServer: {
     command: `npm run dev -- --host ${host} --port ${port} --strictPort`,
     url: baseURL,
-    reuseExistingServer: true,
+    reuseExistingServer: false,
     timeout: 120_000,
   },
   projects: [

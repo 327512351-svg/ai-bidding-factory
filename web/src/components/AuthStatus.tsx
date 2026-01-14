@@ -21,7 +21,15 @@ export function AuthStatus() {
     >
       <span style={{ marginRight: "1rem" }}>状态：{status}</span>
       <span style={{ marginRight: "1rem" }}>用户：{user}</span>
-      <Link to="/login" style={{ marginRight: "0.75rem", color: appTheme.colors.link }}>
+      <Link
+        to="/login"
+        style={{
+          marginRight: "0.75rem",
+          color: appTheme.colors.link,
+          textDecoration: "underline",
+          textUnderlineOffset: "2px",
+        }}
+      >
         登录/切换
       </Link>
       <button
