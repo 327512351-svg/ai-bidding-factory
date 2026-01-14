@@ -173,6 +173,11 @@ export function Login() {
                 </Link>
               </li>
               <li>
+                <Link to="/checkpoint/final" style={{ color: appTheme.colors.link }}>
+                  系统就绪验证（Task 21，占位）
+                </Link>
+              </li>
+              <li>
                 <Link to="/help" style={{ color: appTheme.colors.link }}>
                   帮助与引导（受保护）
                 </Link>

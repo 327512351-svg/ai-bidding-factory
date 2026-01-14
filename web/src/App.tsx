@@ -26,6 +26,7 @@ import { Config } from "./pages/Config";
 import { Monitoring } from "./pages/Monitoring";
 import { Users } from "./pages/Users";
 import { SystemCheckpoint } from "./pages/SystemCheckpoint";
+import { FinalReadiness } from "./pages/FinalReadiness";
 import { Help } from "./pages/Help";
 import { DebugCrash } from "./pages/DebugCrash";
 import { DebugSkeleton } from "./pages/DebugSkeleton";
@@ -103,6 +104,10 @@ export default function App() {
           <Route
             path="/checkpoint/system"
             element={<ProtectedRoute element={<SystemCheckpoint />} requiredStatus="authenticated" />}
+          />
+          <Route
+            path="/checkpoint/final"
+            element={<ProtectedRoute element={<FinalReadiness />} requiredStatus="authenticated" />}
           />
           <Route
             path="/help"

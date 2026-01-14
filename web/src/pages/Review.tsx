@@ -127,6 +127,18 @@ export function Review() {
                   审核拒绝（占位）
                 </button>
               </div>
+
+              <div style={{ marginTop: "0.9rem", paddingTop: "0.75rem", borderTop: `1px dashed ${appTheme.colors.border}` }}>
+                <h4 style={{ margin: "0 0 0.35rem 0" }}>审核历史（占位）</h4>
+                <p style={{ color: appTheme.colors.muted, margin: 0 }}>
+                  当前未接入真实审计/留痕系统；历史记录仅为占位展示，任何结论需人工确认。
+                </p>
+                <ul style={{ color: appTheme.colors.muted, margin: "0.5rem 0 0 0", paddingLeft: "1.2rem" }}>
+                  <li>2026-01-14 记录创建（占位）</li>
+                  <li>待人工审核（占位）</li>
+                </ul>
+              </div>
+
               <p style={{ color: appTheme.colors.muted, marginTop: "0.75rem" }}>
                 fail-closed：最终结论需人工确认；未接入审计/追溯/实际变更。
               </p>

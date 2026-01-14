@@ -63,6 +63,9 @@ export function Home() {
             <li>
               <Link to="/debug/crash">错误边界验证（19.1）</Link>
             </li>
+          <li>
+            <Link to="/checkpoint/final">系统就绪验证（Task 21，占位）</Link>
+          </li>
           </ul>
           <p style={{ color: appTheme.colors.muted, margin: "0.5rem 0 0 0", fontSize: "0.85rem" }}>
             注：错误边界验证会触发页面错误提示，需点“重试/返回首页”恢复。
