@@ -158,6 +158,26 @@ export function Login() {
                 </Link>
               </li>
               <li>
+                <Link to="/monitoring" style={{ color: appTheme.colors.link }}>
+                  系统监控（受保护）
+                </Link>
+              </li>
+              <li>
+                <Link to="/users" style={{ color: appTheme.colors.link }}>
+                  用户管理（受保护）
+                </Link>
+              </li>
+              <li>
+                <Link to="/checkpoint/system" style={{ color: appTheme.colors.link }}>
+                  系统检查点（受保护）
+                </Link>
+              </li>
+              <li>
+                <Link to="/help" style={{ color: appTheme.colors.link }}>
+                  帮助与引导（受保护）
+                </Link>
+              </li>
+              <li>
                 <Link to="/workflow" style={{ color: appTheme.colors.link }}>
                   工作流程控制（受保护）
                 </Link>

@@ -43,6 +43,31 @@ export function Home() {
         aria-label="快速导航"
       >
         <h2 style={{ marginTop: 0 }}>快速导航</h2>
+        <div
+          style={{
+            border: `1px dashed ${appTheme.colors.border}`,
+            borderRadius: "8px",
+            padding: "0.75rem",
+            marginBottom: "0.75rem",
+            background: "#0b1220",
+          }}
+        >
+          <strong>19.1–19.3 新增验证入口（置顶）</strong>
+          <ul style={{ margin: "0.5rem 0 0 0", paddingLeft: "1.2rem" }}>
+            <li>
+              <Link to="/help">帮助与引导（19.3）</Link>
+            </li>
+            <li>
+              <Link to="/debug/skeleton">骨架加载演示（19.2）</Link>
+            </li>
+            <li>
+              <Link to="/debug/crash">错误边界验证（19.1）</Link>
+            </li>
+          </ul>
+          <p style={{ color: appTheme.colors.muted, margin: "0.5rem 0 0 0", fontSize: "0.85rem" }}>
+            注：错误边界验证会触发页面错误提示，需点“重试/返回首页”恢复。
+          </p>
+        </div>
         <ul>
           <li>
             <Link to="/">首页 (占位)</Link>
@@ -91,6 +116,18 @@ export function Home() {
           </li>
           <li>
             <Link to="/config">系统配置（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/monitoring">系统监控（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/users">用户管理（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/checkpoint/system">系统检查点（受保护，占位）</Link>
+          </li>
+          <li>
+            <Link to="/help">帮助与引导（受保护，占位）</Link>
           </li>
           <li>
             <Link to="/checkpoint/review">人工审核检查点</Link>
