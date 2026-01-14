@@ -148,6 +148,11 @@ export function Login() {
                 </Link>
               </li>
               <li>
+                <Link to="/reports" style={{ color: appTheme.colors.link }}>
+                  报告生成（受保护）
+                </Link>
+              </li>
+              <li>
                 <Link to="/workflow" style={{ color: appTheme.colors.link }}>
                   工作流程控制（受保护）
                 </Link>

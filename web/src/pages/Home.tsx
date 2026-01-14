@@ -87,6 +87,9 @@ export function Home() {
             <Link to="/notifications">实时通知（受保护，占位）</Link>
           </li>
           <li>
+            <Link to="/reports">报告生成（受保护，占位）</Link>
+          </li>
+          <li>
             <Link to="/checkpoint/review">人工审核检查点</Link>
           </li>
           <li>
