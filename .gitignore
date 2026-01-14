@@ -21,5 +21,9 @@ web/dist/
 .vite/
 web/.vite/
 
+# Playwright (E2E)
+web/playwright-report/
+web/test-results/
+
 # OS / editor
 .DS_Store
