@@ -70,6 +70,18 @@ export function Home() {
           <li>
             <Link to="/review">人工审核队列（受保护，占位）</Link>
           </li>
+        <li>
+          <Link to="/compliance">合规监控仪表板（受保护，占位）</Link>
+        </li>
+        <li>
+          <Link to="/audit">审计日志查看器（受保护，占位）</Link>
+        </li>
+        <li>
+          <Link to="/traceability">追溯链可视化（受保护，占位）</Link>
+        </li>
+        <li>
+          <Link to="/workflow">工作流程控制（受保护，占位）</Link>
+        </li>
           <li>
             <Link to="/checkpoint/review">人工审核检查点</Link>
           </li>

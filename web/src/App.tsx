@@ -15,6 +15,10 @@ import { ContentGeneration } from "./pages/ContentGeneration";
 import { Review } from "./pages/Review";
 import { ReviewCheckpoint } from "./pages/ReviewCheckpoint";
 import { IntegrationCheckpoint } from "./pages/IntegrationCheckpoint";
+import { ComplianceDashboard } from "./pages/ComplianceDashboard";
+import { AuditLogs } from "./pages/AuditLogs";
+import { Traceability } from "./pages/Traceability";
+import { Workflow } from "./pages/Workflow";
 
 export default function App() {
   return (
@@ -48,6 +52,22 @@ export default function App() {
         <Route
           path="/review"
           element={<ProtectedRoute element={<Review />} requiredStatus="authenticated" />}
+        />
+        <Route
+          path="/compliance"
+          element={<ProtectedRoute element={<ComplianceDashboard />} requiredStatus="authenticated" />}
+        />
+        <Route
+          path="/audit"
+          element={<ProtectedRoute element={<AuditLogs />} requiredStatus="authenticated" />}
+        />
+        <Route
+          path="/traceability"
+          element={<ProtectedRoute element={<Traceability />} requiredStatus="authenticated" />}
+        />
+        <Route
+          path="/workflow"
+          element={<ProtectedRoute element={<Workflow />} requiredStatus="authenticated" />}
         />
         <Route path="/checkpoint/review" element={<ReviewCheckpoint />} />
         <Route path="/checkpoint/integration" element={<IntegrationCheckpoint />} />

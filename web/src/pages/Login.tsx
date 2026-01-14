@@ -127,6 +127,26 @@ export function Login() {
                   人工审核（受保护）
                 </Link>
               </li>
+              <li>
+                <Link to="/compliance" style={{ color: appTheme.colors.link }}>
+                  合规监控（受保护）
+                </Link>
+              </li>
+              <li>
+                <Link to="/audit" style={{ color: appTheme.colors.link }}>
+                  审计日志查看（受保护）
+                </Link>
+              </li>
+              <li>
+                <Link to="/traceability" style={{ color: appTheme.colors.link }}>
+                  追溯链（受保护）
+                </Link>
+              </li>
+              <li>
+                <Link to="/workflow" style={{ color: appTheme.colors.link }}>
+                  工作流程控制（受保护）
+                </Link>
+              </li>
             </>
           ) : (
             <li>受保护页面需要 authenticated（当前状态：{status}）</li>
